@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise | Lesson 1 : JavaScript</title>
+  </head>
+  <body>
+    <script>
+      // Promise
+
+      const executorFunc = (resolve, reject) => {
+        const isReady = true;
+        if (isReady) {
+          resolve("Ready!");
+        } else {
+          reject("Not Ready :(");
+        }
+      };
+      const makeACoffee = new Promise(executorFunc);
+      console.log(makeACoffee);
+
+      const promiseDelay = (ms) => {
+        // buat delay sekian detik
+        return new Promise((resolve) => {
+          setTimeout(resolve, ms);
+        });
+      };
+    </script>
+  </body>
+</html>

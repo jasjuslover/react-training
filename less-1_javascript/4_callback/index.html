@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback | Lesson 1 : JavaScript</title>
+  </head>
+  <body>
+    <script>
+      // Callback
+
+      //   // the concept of synchronous & asynchronous
+      //   // sync
+      // [1, 2, 3, 4].forEach(function (num) {
+      //   console.log(num);
+      // });
+
+      //   // async
+      [1, 2, 3, 4].forEach(function (num) {
+        setTimeout(
+          function () {
+            // <- the function inside timeout called callback that handle what to do after timeout delay started
+            console.log(num);
+          },
+          [1000 * num]
+        );
+      });
+      //   [1, 2, 3, 4].forEach(function (num) {
+      //     setTimeout(function() {
+      //       console.log(num);
+      //     }, [1000 * (num % 2)]);
+      //   });
+    </script>
+  </body>
+</html>

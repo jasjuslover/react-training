@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await | Lesson 1 : JavaScript</title>
+  </head>
+  <body>
+    <script>
+      // Async Await
+
+        const executorFunc = (resolve, reject) => {
+          const isReady = true;
+          if (isReady) {
+            resolve("Ready!");
+          } else {
+            reject("Not Ready :(");
+          }
+        };
+        const makeACoffee = new Promise(executorFunc);
+        // console.log(await makeACoffee());
+        const result = await makeACoffee()
+
+        // executePromiseFunction.then()
+    </script>
+  </body>
+</html>
