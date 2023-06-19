@@ -1,26 +1,38 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
+// import "./App.css";
 import HelloWorld from "./components/HelloWorld";
 import Users from "./components/Users";
 import Counter from "./components/Count";
 import ReverseString from "./components/ReverseString";
-import Factorial from "./components/Factorial";
+// import Factorial from "./components/Factorial";
+import FetchApi from "./components/FetchApi";
+import CounterProvider from "./contexts/CounterContext";
+import Theming from "./components/Theming";
+import Login from "./components/Login";
 
 const App = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div style={{ display: "flex", columnGap: ".5rem" }}>
+    <div
+      style={{ display: "flex", columnGap: ".5rem", flexDirection: "column" }}
+    >
       {/* <input type={showPassword ? "text" : "password"} />
       <button onClick={() => setShowPassword(!showPassword)}>
         {showPassword ? "Hide" : "Show"} Password
       </button> */}
       {/* <Users /> */}
       {/* <Counter /> */}
+      {/* <CounterProvider>
+        <Counter />
+      </CounterProvider> */}
       {/* <ReverseString /> */}
-      <Factorial />
+      {/* <Factorial /> */}
+      <FetchApi />
+      {/* <Login />
+      <Theming /> */}
     </div>
   );
 };

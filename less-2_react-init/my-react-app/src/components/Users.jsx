@@ -10,7 +10,11 @@ const Users = () => {
       <h1>Users</h1>
       <div style={{ display: "flex", flexDirection: "column" }}>
         {users.map((user) => (
-          <Anything name={user} deleteUser={deleteUser} />
+          <Anything
+            name={user}
+            deleteUser={deleteUser}
+            button={<button>This is a Button</button>}
+          />
         ))}
       </div>
     </div>
